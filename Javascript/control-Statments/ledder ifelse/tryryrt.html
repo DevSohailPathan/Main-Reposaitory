@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(153, 205, 50, 0.34)
+        }
+
+        h1 {
+            height: 40%;
+            width: 30%;
+            background-color: rgba(100, 107, 85, 0.34);
+            display: flex;
+            display: none;
+        }
+
+        h2 {
+            height: 40%;
+            width: 30%;
+            background-color: rgba(100, 107, 85, 0.34);
+            display: flex;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="class" id="10-class"><label>10 th Class</label>
+    <h1 id="b-1">10 Boys</h1>
+    <br>
+    <input type="radio" name="class" id="12-class"><label>12 th Class</label>
+    <h2 id="b-2"> 12 Boys</h2>
+    <button onclick="getvalue()">Submit</button>
+
+    <script>
+
+
+        function getvalue() {
+
+            grade = ""
+
+
+            // document.getElementById("input-one").value
+            // document.getElementById("input-two").value
+
+
+            if (document.getElementById("10-class").checked) {
+                grade = "10-class"
+                document.getElementById("b-1").style.display = "block"
+            }
+            else if (document.getElementById("12-class").checked) {
+                grade = "12-class"
+                document.getElementById("b-2 ").style.display = "block"
+
+            }
+            else {
+                grade = " No option select"
+            }
+            alert(grade)
+
+        }
+
+        function grade() {
+            let marks = prompt("Enter your marks :")
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            height: 60%;
+            width: 35%;
+            background-color: rgba(194, 217, 117, 0.547);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.298);
+            background-image: url(https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dw2ec1a783/images/zoom/TCCE28TCAFF_U0001_1.jpg?sw=730&sh=928&sm=fit);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-items: center;
+        }
+
+        p {
+            height: 15%;
+            width: 90%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.298);
+            font-size: 20px;
+            border: dashed 1px black;
+        }
+
+        button {
+            height: 15%;
+            width: 88%;
+            background-color: rgba(255, 255, 255, 0.312);
+            border: none;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.298);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }
+
+        input {
+            height: 7%;
+            width: 80%;
+
+        }
+
+        span {
+            background-color: rgb(167, 167, 220);
+            color: rgb(147, 29, 29);
+        }
+        label{
+         
+            font-size: 30px;
+            color: rgb(0, 17, 81);
+            margin-right: 26%;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="box" id="box">
+            <h1>Temperature Range </h1>
+            <label for="">Enter Temperature <sup>༠</sup>c </label>
+            <input type="text" name="" id="input">
+            <button onclick="sohail()">Submit</button>
+            <p id="display"></p>
+        </div>
+    </div>
+
+    <script>
+
+        function sohail() {
+
+            let a = document.getElementById("input").value
+            let bgColor = ""
+            let fontColor = ""
+            let display = ""
+
+            if (a >= 40) {
+                display = "VERY HOT"
+                bgColor = " #D73535"
+                fontColor = " #FFD41D"
+
+            }
+            else if (a >= 30) {
+                display = "Hot"
+                bgColor = " #FFD41D"
+                fontColor = " #132440"
+
+
+            }
+            else if (a >= 20) {
+                display = "Warm"
+                bgColor = " #ED985F"
+                fontColor = " #001F3D"
+
+            }
+            else if (a >= 10) {
+                display = "Cool"
+                bgColor = " #6AECE1"
+                fontColor = " #005461"
+
+            }
+            else if (a >= 0) {
+                display = "Cold"
+                bgColor = "#AEDEFC"
+                fontColor = " #9BB4C0"
+
+            }
+            else {
+                display = "Freezing"
+            }
+            document.getElementById("input").value = "";
+            document.getElementById("display").innerHTML = display;
+            document.getElementById("display").style.backgroundColor = bgColor;
+      
+            document.getElementById("display").style.color = fontColor;
+        }
+    </script>
+</body>
+
+</html>21..
