@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let units = prompt();
+      total = 0;
+      bill = 0;
+
+      if (units <= 50) {
+        bill = units * 7;
+      } else if (units <= 150) {
+        bill = units * 8;
+      } else if (units <= 250) {
+        bill = units * 12;
+      } else {
+        bill = units * 15;
+
+        percent = 0.2 * bill;
+
+        total = bill = +percent;
+
+        alert(total);
+      }
+    </script>
+  </body>
+</html>
