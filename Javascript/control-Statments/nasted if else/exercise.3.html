@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        function login() {
+            let username = "sohail";
+            let password = "1234";
+            let email = "pathansohal68@gmail.com"
+
+
+            a = document.getElementById("input-one").value;
+            b = document.getElementById("input-two").value;
+
+            if ((username == a || email == a && password == b)) {
+                document.getElementById("display").innerHTML = "Login Successfull"+  " " +"✅" ;
+                document.getElementById("display").style.backgroundColor="#08CB00"
+            }
+            else {
+                document.getElementById("display").innerHTML = "Login unsuccessfull " +"  "+ "❌"
+                  document.getElementById("display").style.backgroundColor="#FF3F33"
+            }
+             document.getElementById("display").style.color="#FFFFFF"
+        }
+    </script>
+</body>
+</html>
